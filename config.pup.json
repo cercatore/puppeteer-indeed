@@ -1,0 +1,14 @@
+{
+  "config":{
+      "owner" : "claudiobagnatogiuseppe@gmail.com",
+      "screenshots" : "./Desktop/screenshots",
+      "search": {
+        "keywords": "backend OR frontend OR java OR JAVASCRIPT",
+        "location": "milano"
+      },
+      "baseJobEngine" : "https://it.indeed.com/m",
+      "mail_user" : "homegreen18@gmail.com"
+
+
+  }
+}

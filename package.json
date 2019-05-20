@@ -1,0 +1,38 @@
+{
+  "name": "puppeteer-indeed",
+  "version": "1.0.1",
+  "description": "a node client to scrape job engines",
+  "main": "bla.js",
+  "scripts": {
+    "test": "mocha ./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cercatore/puppeteer-indeed.git"
+  },
+  "keywords": [
+    "job",
+    "indeed",
+    "bot",
+    "check",
+    "findmeajob",
+    "find",
+    "a",
+    "job",
+    "ineedajob"
+  ],
+  "author": "cercatore",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/cercatore/puppeteer-indeed/issues"
+  },
+  "homepage": "https://github.com/cercatore/puppeteer-indeed#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "nodemailer": "^6.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "mocha": "^6.1.4"
+  }
+}
