@@ -88,7 +88,7 @@ async function run(){
         $log(ac.stat + ":");
         if (hrefs !== 0 ) await page.reload();
 
-        var list = "h2.jobTitle > a";
+        var list = "h2.jobTitle > a";							// forse ERROR se headless
         await page.waitForSelector("h2.jobTitle > a", { visible:true, waitUntil:'networkidle0'});
 // ()=>{throw new Error("oh-oh")}
         hrefs = await page.$$eval('h2.jobTitle > a[href]', aTags => aTags.map(a => a.getAttribute("href")));
