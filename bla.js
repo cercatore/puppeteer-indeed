@@ -1,19 +1,18 @@
+#!/bin/node
 // This is your Editor pane. Write your JavaScript here and
 // use the command line to execute commands
-var Bravey = require('bravey');
 var puppeteer = require('puppeteer');
 var sleep = require('sleep');
 
 var fig = require('./config.pup.json');
 
 var config = fig.config;
-var nlp = new Bravey.Nlp.Fuzzy();
 const $log = console.log;
 
 $log(config)
 
-nlp.addDocument("I want a pizza!", "pizza", { fromFullSentence: true, expandIntent: true });
-console.log(nlp.test("Want pizza, please").intent);
+// nlp.addDocument("I want a pizza!", "pizza", { fromFullSentence: true, expandIntent: true });
+// console.log(nlp.test("Want pizza, please").intent);
 
 const keywords = [ "carta" ];
 // create a name/id key pair
