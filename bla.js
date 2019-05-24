@@ -1,8 +1,8 @@
-#!/bin/node
+#!/usr/bin/env node
 // This is your Editor pane. Write your JavaScript here and
 // use the command line to execute commands
 var puppeteer = require('puppeteer');
-var sleep = require('sleep');
+var delay = require('delay');
 
 var fig = require('./config.pup.json');
 
@@ -29,6 +29,8 @@ var transporter ;
 
 async function run(){
   const browser = await puppeteer.launch({
+    executablePath:"/usr/bin/chromium-browser",
+    args:[ '--no-sandbox' ],
     headless:false,
     slowMo:0
     });
@@ -45,7 +47,7 @@ async function run(){
     secure: true, // use SSL
     auth: {
         user: 'homegreen18@gmail.com',
-        pass: 'peperone'
+        pass: Buffer.from('cGVwZXJvbmU=', 'base64').toString()
     }
 
   }
@@ -53,9 +55,9 @@ async function run(){
   if (transporter) $log('created ' + transporter + ' , transport'); else throw new Error('error')
 
 
-  await page.setViewport({ width: 1366, height: 768});
+  await page.setViewport({ width: 1024, height: 768});
   const timeout = 40000;
-  page.setDefaultNavigationTimeout(timeout / 2);
+  page.setDefaultNavigationTimeout(timeout /2 );
   page.setDefaultTimeout(timeout) 
   // page.goto("http://cercatore.github.com", {waitUntil:"load"});
   // page.goto(config.baseJobEngine, {waitUntil:"load"});
@@ -142,7 +144,7 @@ async function run(){
 			foundHash[item] = '1';
 		          var ticker = "puppeteer cosmic " + config.baseJobEngine + "/" + item + "<br/>" + "<small>and the wiwinner is: </small><br/>" + "<b>" + config.search.keywords + "</b> yay <br/>";
 			$log("trovata nuova " + ticker );
-			 // mySendMail(ticker);
+			mySendMail(ticker);
 		}
 		          
         jobhound.termine = config.search.keywords;
@@ -162,7 +164,7 @@ async function run(){
       empty = 0;
     }
 
-    sleep.sleep(60);
+await    delay(60000);
     $log("next time in " + 60 + ", secs. ");
 
 
