@@ -2,12 +2,11 @@
   "config":{
       "owner" : "claudiobagnatogiuseppe@gmail.com",
       "screenshots" : "./Desktop/screenshots",
-      "search": {
-        "keywords": "promoter",
+      "input": {
+        "path": "path/to/input_names",
         "location": "milano"
       },
-      "baseJobEngine" : "https://it.indeed.com/m",
-      "baseG" : "https://myaccount.google.com/",
+      "base" : "https://reddit.com",
       "mail_user" : "homegreen18@gmail.com"
 
 

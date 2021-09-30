@@ -2,7 +2,6 @@
   "name": "puppeteer-indeed",
   "version": "1.0.1",
   "description": "a node client to scrape job engines",
-  "main": "bla.js",
   "scripts": {
     "test": "mocha ./test"
   },
@@ -31,6 +30,7 @@
     "axios": "^0.18.0",
     "delay": "^4.2.0",
     "nodemailer": "^6.1.1",
+    "playwright": "^1.11.1",
     "puppeteer": "^1.16.0"
   },
   "devDependencies": {

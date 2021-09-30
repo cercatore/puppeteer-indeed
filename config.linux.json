@@ -1,0 +1,15 @@
+{
+    "config":{
+        "owner" : "claudiobagnatogiuseppe@gmail.com",
+        "screenshots" : "/usr/home/ubuntu/screenshots",
+        "search": {
+          "keywords": "carta or volantini and not alberghiero and not cameriere",
+          "location": "milano"
+        },
+        "baseJobEngine" : "https://it.indeed.com/m",
+        "headless": true,
+        "mail_user": "homegreen18@gmail.com"
+  
+  
+    }
+  }
